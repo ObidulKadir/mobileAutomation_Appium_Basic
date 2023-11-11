@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Package.mobileAutomation.androidApkRun">
+      <class name="Package.mobileAutomation.addRemoveApp">
         <methods>
-          <include name="runApp"/>
+          <include name="start"/>
+          <include name="mainActivityPage"/>
+          <include name="removeApp"/>
         </methods>
-      </class> <!-- Package.mobileAutomation.androidApkRun -->
+      </class> <!-- Package.mobileAutomation.addRemoveApp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

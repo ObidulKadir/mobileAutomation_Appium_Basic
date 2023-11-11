@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-10T01:46:07Z" name="Default suite" finished-at="2023-11-10T01:46:23Z" duration-ms="16012">
+  <suite started-at="2023-11-11T00:47:00Z" name="Default suite" finished-at="2023-11-11T00:47:15Z" duration-ms="15588">
     <groups>
     </groups>
-    <test started-at="2023-11-10T01:46:07Z" name="Default test" finished-at="2023-11-10T01:46:23Z" duration-ms="16012">
-      <class name="Package.mobileAutomation.androidApkRun">
-        <test-method signature="runApp()[pri:0, instance:Package.mobileAutomation.androidApkRun@600b9d27]" started-at="2023-11-10T07:46:07Z" name="runApp" finished-at="2023-11-10T07:46:23Z" duration-ms="15997" status="PASS">
+    <test started-at="2023-11-11T00:47:00Z" name="Default test" finished-at="2023-11-11T00:47:15Z" duration-ms="15588">
+      <class name="Package.mobileAutomation.addRemoveApp">
+        <test-method is-config="true" signature="start()[pri:0, instance:Package.mobileAutomation.addRemoveApp@6bc407fd]" started-at="2023-11-11T06:47:00Z" name="start" finished-at="2023-11-11T06:47:08Z" duration-ms="8363" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runApp -->
-      </class> <!-- Package.mobileAutomation.androidApkRun -->
+        </test-method> <!-- start -->
+        <test-method signature="mainActivityPage()[pri:0, instance:Package.mobileAutomation.addRemoveApp@6bc407fd]" started-at="2023-11-11T06:47:08Z" name="mainActivityPage" finished-at="2023-11-11T06:47:15Z" duration-ms="6534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mainActivityPage -->
+        <test-method is-config="true" signature="removeApp()[pri:0, instance:Package.mobileAutomation.addRemoveApp@6bc407fd]" started-at="2023-11-11T06:47:15Z" name="removeApp" finished-at="2023-11-11T06:47:15Z" duration-ms="681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeApp -->
+      </class> <!-- Package.mobileAutomation.addRemoveApp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
