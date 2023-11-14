@@ -7,9 +7,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -31,15 +29,25 @@ public class addRemoveApp {
 		driver = new AndroidDriver(new URL("http://192.168.0.191:4723/"), cap);
 	}
 	
-	@Test
+	@Test (priority = 0)
 	public void mainActivityPage() {
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.findElement(By.id("com.androidsample.generalstore:id/spinnerCountry")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"android:id/text1\" and @text=\"Algeria\"]")).click();
-		
+		driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"android:id/text1\" and @text=\"Algeria\"]")).click();	
 		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"com.androidsample.generalstore:id/nameField\"]")).sendKeys("Hello");
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+	}
+	
+	@Test (priority = 1)
+	public void productAddToCart() {
+		driver.findElement(By.xpath("(//android.widget.TextView[@resource-id=\"com.androidsample.generalstore:id/productAddCart\"])[2]")).click();	
+	}
+	
+	@Test (priority = 2)
+	public void cartPage() throws InterruptedException {	
+		driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
+		Thread.sleep(2000);
 	}
 	
 	@AfterTest
